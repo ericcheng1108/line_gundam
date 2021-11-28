@@ -16,15 +16,16 @@ module LineGundam
   end
 
   class << self
-    def configuration
-      @configuration ||= Configuration.new
-    end
-
     def configure
       block_given? ? yield(configuration) : configuration
     end
-  end
 
+    private
+
+    def configuration
+      @configuration ||= Configuration.new
+    end
+  end
 
   class Error < StandardError; end
 end
