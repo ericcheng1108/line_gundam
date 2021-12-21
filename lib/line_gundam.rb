@@ -3,11 +3,12 @@
 require_relative 'line_gundam/version'
 
 module LineGundam
+  autoload :Client, 'line_gundam/client'
+
   class Configuration
     BROADCAST_URL = 'https://api.line.me/v2/bot/message/broadcast'
 
-    attr_accessor :access_token
-    attr_accessor :broadcast_url
+    attr_accessor :access_token, :broadcast_url
 
     def initialize
       @access_token = ''
