@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 require_relative 'line_gundam/version'
+require 'json'
+require 'faraday'
+
+Faraday.default_adapter = :net_http
 
 module LineGundam
   autoload :Client, 'line_gundam/client'
