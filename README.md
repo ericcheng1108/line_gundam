@@ -22,7 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Setup
+```
+LineGundam.configure do |config|
+  # Default broadcast_url
+  # config.broadcast_url = 'https://api.line.me/v2/bot/message/broadcast'
+  config.access_token = 'your LINE message api's access token'
+end
+```
+
+### Send message method
+```
+LineGundam::Client.send_message(type: 'text', text: ['Hello', 'world', '!'])
+```
 
 ## Development
 
